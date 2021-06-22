@@ -56,7 +56,7 @@
                     <form class="forma" name="myRatingForm" action="includes/reitingas.inc.php" method="post">
                         <div class="mb-3">
                             <label for="pasirinkimas" class="form-label">Pasirinkite kursą</label>
-                            <select name="pasirinkimas" id="kursupasirinkimas" form="myRatingForm">
+                            <select name="pasirinkimas" id="kursupasirinkimas">
                             <option value="1">PHP Pagrindai</option>
                             <option value="2">HTML/CSS Ivadas</option>
                             <option value="3">Pazintis su GIT</option>

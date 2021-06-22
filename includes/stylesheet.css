@@ -1,0 +1,64 @@
+* {
+    font-family: 'Exo', sans-serif;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+.header {
+    background-color: #ffffff;
+}
+
+.logo {
+    height: 60px;
+    margin: 20px;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.card-title {
+    color: #6eb92b;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.fa-comment, .fa-star {
+    color: #6eb92b;
+}
+
+.button {
+    color: #ffffff;
+    background-color: #6eb92b;
+}
+
+.autorius, .card-text {
+    color: #697070;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.forma {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.card, .form-control, .btn {
+    border-radius: 5px;
+}
+
+

@@ -21,122 +21,8 @@
     </header>
     <div class="container w-100">
         <section>
-            <div class="row mb-3">
-                <div class="col">
-                    <h2 style="font-size: 32px; font-weight: 400">Naujausi kursai</h2>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="card col-lg-4 col-md-6 col-sm-12">
-                    <img src="img/php.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#">
-                            <h5 class="card-title">PHP Pagrindai</h5>
-                        </a>
-                        <p class="autorius">Autorius</p>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, neque dignissimos?
-                            Aliquid ducimus atque facere deserunt nemo enim explicabo fuga?
-                        </p>
-                        <div class="row">
-                            <div class="col">
-                                <span>4</span>
-                                <i class="far fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="col text-align-right">
-                                <i class="fas fa-comment"></i>
-                                <span>15</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card col-lg-4 col-md-6 col-sm-12">
-                    <img src="img/css.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#">
-                            <h5 class="card-title">HTML/CSS Įvadas</h5>
-                        </a>
-                        <p class="autorius">Autorius</p>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, neque dignissimos?
-                            Aliquid ducimus atque facere deserunt nemo enim explicabo fuga?
-                        </p>
-                        <div class="row">
-                            <div class="col">
-                                <span>4</span>
-                                <i class="far fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="col text-align-right">
-                                <i class="fas fa-comment"></i>
-                                <span>27</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card col-lg-4 col-md-6 col-sm-12">
-                    <img src="img/git.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#">
-                            <h5 class="card-title">Pažintis su GIT</h5>
-                        </a>
-                        <p class="autorius">Autorius</p>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, neque dignissimos?
-                            Aliquid ducimus atque facere deserunt nemo enim explicabo fuga?
-                        </p>
-                        <div class="row">
-                            <div class="col">
-                                <span>3</span>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="col text-align-right">
-                                <i class="fas fa-comment"></i>
-                                <span>3</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="card col-lg-4 col-md-6 col-sm-12">
-                    <img src="img/js.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <a href="#">
-                            <h5 class="card-title">JavaScript Žaliems</h5>
-                        </a>
-                        <p class="autorius">Autorius</p>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, neque dignissimos?
-                            Aliquid ducimus atque facere deserunt nemo enim explicabo fuga?
-                        </p>
-                        <div class="row">
-                            <div class="col">
-                                <span>5</span>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="col text-align-right">
-                                <i class="fas fa-comment"></i>
-                                <span>9</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php include_once 'includes/kursai.inc.php'; ?>
             </div>
         </section>
         <section>
@@ -162,6 +48,25 @@
                             <input type="email" name="email" class="form-control" id="email">
                         </div>
                         <button type="submit" class="btn button">Užsisakyti</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row w-50">
+                <div class="col form-box">
+                    <form class="forma" name="myRatingForm" action="includes/reitingas.inc.php" method="post">
+                        <div class="mb-3">
+                            <label for="pasirinkimas" class="form-label">Pasirinkite kursą</label>
+                            <select name="pasirinkimas" id="kursupasirinkimas" form="myRatingForm">
+                            <option value="1">PHP Pagrindai</option>
+                            <option value="2">HTML/CSS Ivadas</option>
+                            <option value="3">Pazintis su GIT</option>
+                            <option value="4">JavaScript Zaliems</option>
+                        </div>
+                        <div class="mb-3">
+                            <label for="vertinimas" class="form-label">Ivertinkite nuo 1 iki 5</label>
+                            <input type="number" id="vertinimas" name="vertinimas" min="1" max="5">
+                        </div>
+                        <button type="submit" class="btn button">Įvertinti</button>
                     </form>
                 </div>
             </div>
